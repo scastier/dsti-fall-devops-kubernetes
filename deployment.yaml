@@ -5,7 +5,8 @@ metadata:
   labels:
     app: kubernetes-bootcamp
 spec:
-  # TO COMPLETE #2
+  # THIS PAR HAS BEEN COMPLETED #2
+  replicas: 3
   selector:
     matchLabels:
       app: kubernetes-bootcamp
@@ -16,4 +17,11 @@ spec:
     spec:
       containers:
       - name: kubernetes-bootcamp
-        # TO COMPLETE #1
+        # ADD this line
+        image: gcr.io/google-samples/kubernetes-bootcamp:v1
+        #ports: 8080
+        #- port: 80
+        #  name: http
+        #  targetPort: 80
+        #- containerPort: 80
+        # THIS PART HAS BEEN COMPLETED #1
