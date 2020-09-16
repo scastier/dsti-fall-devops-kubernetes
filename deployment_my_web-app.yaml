@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-webapp-container-seb
+  labels:
+    app: hello-world-webapp-container-seb
+spec:
+  # THIS PAR HAS BEEN COMPLETED #2
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-world-webapp-container-seb
+  template:
+    metadata:
+      labels:
+        app: hello-world-webapp-container-seb
+    spec:
+      containers:
+      - name: hello-world-webapp-container-seb
+        # ADD this line
+        image: docker34110/hello-world-webapp-container-seb
+        #ports: 8080
+        #- port: 80
+        #  name: http
+        #  targetPort: 80
+        #- containerPort: 80
+        # THIS PART HAS BEEN COMPLETED #1
